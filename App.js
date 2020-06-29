@@ -19,14 +19,18 @@ const App = () => {
 				value: enteredGoal
 			}
     ]);
-	};
+  };
+  
+  const deleteItem = id => {
+    setGoals(currentGoals => currentGoals.filter(goal => goal.key !== id))
+  }
 
 	return (
 		<View style={styles.root}>
       <GoalInput addGoalHandler={addGoalHandler} />
 			<FlatList
 				data={goals}
-				renderItem={itemData => <GoalItem value={itemData.item.value} />}
+				renderItem={itemData => <GoalItem value={itemData.item.value} removeItem={() => deleteItem(itemData.item.key)} />}
 			/>
 		</View>
 	);
