@@ -20,7 +20,7 @@ const GoalInput = ({ addGoalHandler, onCancel, visible }) => {
 	};
 
 	return (
-		<Modal animationType="slide" visible={visible}>
+		<Modal animationType="fade" visible={visible}>
 			<View style={styles.inputContainer}>
 				<TextInput
 					placeholder="Course Goal"
