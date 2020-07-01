@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, FlatList, Modal, Button } from "react-native";
 import GoalInput from "./components/GoalInput";
 import GoalItem from "./components/GoalItem";
 import Header from "./components/Header";
+import FetchImage from "./components/fetchImage";
 
 const App = () => {
 	const [goals, setGoals] = useState([]);
@@ -26,6 +27,7 @@ const App = () => {
 	return (
 		<>
 			<Header title="React Native App" />
+			<FetchImage />
 			<View style={styles.root}>
 				<Button
 					title="Add New Goal"
